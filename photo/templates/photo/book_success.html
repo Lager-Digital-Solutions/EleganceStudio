@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Success</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f3f3, #e2e2e2);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your booking has been successfully submitted. We will contact you shortly.</p>
+        <p><strong>Name:</strong> {{ booking.full_name }}</p>
+        <p><strong>Date:</strong> {{ booking.booking_date }}</p>
+        <a href="{% url 'photo:book_session' %}">Return to Home</a>
+    </div>
+</body>
+</html>
